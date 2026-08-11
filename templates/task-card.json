@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK-YYYYMMDD-001",
+  "object_id": "OBJECT-001",
+  "objective": "State one verifiable outcome",
+  "primary_role": "C3",
+  "source_of_truth": ["path-or-url-to-authoritative-source"],
+  "inputs": ["input-reference"],
+  "acceptance_criteria": ["criterion-1"],
+  "allowed_actions": ["read", "draft", "test"],
+  "external_action": false,
+  "approval": {
+    "gate": "G1",
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  }
+}

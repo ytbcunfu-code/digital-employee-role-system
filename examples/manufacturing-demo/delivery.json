@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK-20260811-001",
+  "outcome": "conditional",
+  "summary": "The fictional local demo completes the seven-step state flow; production integration remains outside scope.",
+  "evidence": [
+    "examples/manufacturing-demo/fictional-requirements.md",
+    "test: validator passes"
+  ],
+  "verification": [
+    "task and delivery IDs match",
+    "external action remains false",
+    "all examples are marked fictional"
+  ],
+  "open_gaps": ["No live interface, identity provider, database, or production deployment"],
+  "next_human_decision": "Decide whether to approve the demo as a G1 internal baseline"
+}

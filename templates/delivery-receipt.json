@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-YYYYMMDD-001",
+  "outcome": "pending_evidence",
+  "summary": "State the result without upgrading unverified facts",
+  "evidence": ["path-or-url-to-evidence"],
+  "verification": ["check performed and result"],
+  "open_gaps": ["remaining gap"],
+  "next_human_decision": "Approve, reject, or request correction"
+}

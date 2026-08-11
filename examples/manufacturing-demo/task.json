@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-20260811-001",
+  "object_id": "DEMO-FACTORY-001",
+  "objective": "Produce a clickable production-traceability demo that preserves a fictional batch identity across seven workflow steps",
+  "primary_role": "C3",
+  "source_of_truth": ["examples/manufacturing-demo/fictional-requirements.md"],
+  "inputs": ["fictional workflow and fictional identifiers only"],
+  "acceptance_criteria": [
+    "workflow moves from 0/7 to 7/7",
+    "quality closure is required before warehouse confirmation",
+    "the final record traces the same fictional batch identity"
+  ],
+  "allowed_actions": ["read", "draft", "build-local-demo", "test"],
+  "external_action": false,
+  "approval": {
+    "gate": "G1",
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  }
+}
