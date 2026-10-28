@@ -2,7 +2,7 @@
 
 An open, file-first operating model for teams that use AI agents to do real work without losing accountability, evidence, or human approval.
 
-The project provides seven reusable role specifications, machine-checkable task and delivery artifacts, approval gates, and a validator that prevents an AI draft from being mistaken for an approved or externally delivered result.
+The project provides eight reusable role specifications, machine-checkable task and delivery artifacts, approval gates, and a validator that prevents an AI draft from being mistaken for an approved or externally delivered result.
 
 ## Why this exists
 
@@ -28,7 +28,7 @@ Delivery receipt links evidence and verification
 Human approves or rejects the external action
 ```
 
-The seven reference roles are:
+The eight reference roles are:
 
 | ID | Role | Accountable outcome |
 |---|---|---|
@@ -39,12 +39,13 @@ The seven reference roles are:
 | C4 | Application | policy/program applications and evidence consistency |
 | C5 | Delivery | implementation, milestones, acceptance and delivery risk |
 | C6 | Engineering | product code, testing, security, release and operations |
+| C7 | Finance | financial records, budgets, cost review, invoice evidence and payment reconciliation |
 
 ## Three approval gates
 
 - **G0 — Start:** approve a new object or major workstream.
 - **G1 — Content:** approve a version as the formal internal baseline.
-- **G2 — External action:** approve sending, publishing, uploading, submitting, deploying, purchasing, signing, or deleting.
+- **G2 — External action:** approve sending, publishing, uploading, submitting, deploying, purchasing, paying or transferring funds, signing, or deleting.
 
 An internal review, generated file, successful API write, or UI toast is not G1 or G2.
 

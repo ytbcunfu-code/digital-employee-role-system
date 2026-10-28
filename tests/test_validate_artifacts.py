@@ -50,6 +50,30 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual([], validator.validate_task(task))
         self.assertEqual([], validator.validate_delivery(valid_delivery(), task))
 
+    def test_c7_finance_role_is_valid_for_internal_task(self):
+        task = validator.load_json(ROOT / "templates" / "finance-task-card.json")
+        self.assertEqual([], validator.validate_task(task))
+
+    def test_c7_payment_task_requires_explicit_approved_g2(self):
+        task = valid_task()
+        task["primary_role"] = "C7"
+        task["objective"] = "Prepare and execute an approved supplier payment"
+        task["external_action"] = True
+        self.assertIn(
+            "external_action=true requires approved G2",
+            validator.validate_task(task),
+        )
+
+        task["approval"].update(
+            {
+                "gate": "G2",
+                "status": "approved",
+                "approved_by": "human approver",
+                "approved_at": "2026-10-29T09:00:00+08:00",
+            }
+        )
+        self.assertEqual([], validator.validate_task(task))
+
     def test_external_action_requires_g2(self):
         task = valid_task()
         task["external_action"] = True

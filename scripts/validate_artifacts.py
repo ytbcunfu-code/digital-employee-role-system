@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROLES = {f"C{i}" for i in range(7)}
+ROLES = {f"C{i}" for i in range(8)}
 OUTCOMES = {"passed", "conditional", "failed", "pending_evidence"}
 GATES = {"G0", "G1", "G2"}
 APPROVAL_STATES = {"pending", "approved", "rejected"}
@@ -64,7 +64,7 @@ def validate_task(task: dict[str, Any]) -> list[str]:
             errors.append(f"task.{key} must be a non-empty string")
 
     if task["primary_role"] not in ROLES:
-        errors.append("task.primary_role must be one of C0..C6")
+        errors.append("task.primary_role must be one of C0..C7")
 
     for key in ("source_of_truth", "inputs", "acceptance_criteria", "allowed_actions"):
         if not nonempty_list(task[key]):

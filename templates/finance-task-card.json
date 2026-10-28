@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-YYYYMMDD-FINANCE-001",
+  "object_id": "FINANCE-OBJECT-001",
+  "objective": "Reconcile invoice and payment evidence against the authoritative records",
+  "primary_role": "C7",
+  "source_of_truth": ["path-or-url-to-authoritative-financial-records"],
+  "inputs": ["invoice-and-payment-evidence-references"],
+  "acceptance_criteria": [
+    "each amount is traceable to its authoritative source",
+    "discrepancies and missing evidence are recorded",
+    "no payment or transfer is executed as part of this internal reconciliation task"
+  ],
+  "allowed_actions": ["read", "reconcile", "draft", "verify"],
+  "external_action": false,
+  "approval": {
+    "gate": "G1",
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  }
+}
